@@ -32,9 +32,9 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 > > ls lists all the files in the current directory.
 
-> > `ls -a` lists all the files, including hidden files
-> > `ls -l` lists all files in long format with additional information
-> > `ls -lh` lists all the files in long format and prints the file sizes in human readable format with KB or MB units.
+> > * `ls -a` lists all the files, including hidden files
+> > * `ls -l` lists all files in long format with additional information
+> > * `ls -lh` lists all the files in long format and prints the file sizes in human readable format with KB or MB units.
 
 > > Using a combination of `ls -alh` would be meaningful as it shows me all the files in the directory with additional information such as permission, suffix, created date, and fize size in a human readable format.
 
