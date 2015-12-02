@@ -37,7 +37,8 @@ import sklearn
 
 Did you install Python 2 or 3? Why? How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> Python 2.7.10
+>> I have both Python version 2 and 3 installed as Anaconda allows me to switch between environments pretty quickly. However, I will primarily be using version 2.7.10.  
+>> To check Python version, I would open a terminal or command prompt and enter an interactive Python interpreter. The version would be printed right there.
 
 ---
 

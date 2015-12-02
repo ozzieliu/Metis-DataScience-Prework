@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> vim, sine I have some experience with it. But sometimes emacs for simplicity sake.
+>> vim, since I have some experience with it and it's already installed on most workstations. But sometimes I'll use emacs for simplicity sake.
 
 ---
 
@@ -61,6 +61,12 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> Atom since I've been using it since its release. It looks great and is pretty customizeable.
+> Atom since I've been using it since its release. It looks great and is pretty customizeable with CSS or many of the available themes and packages.  
+
+> Some useful features included a built-in package manager to easily search and install new features. It also has a autocomplete feature even for text that is pretty handy when typing repetitive words.
+
+> My favorite shortcut is Control+Shift+M as it opens up a Markdown preview of my file, just like this one. This way I can look at my files before I commit it to GitHub.
+
+> To customize Atom, I go to the settings and make the changes I would like to see. Or I can Google issues that I have encountered and see if someone else has found a solution for it.
 
 ---
