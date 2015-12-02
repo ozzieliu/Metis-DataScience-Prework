@@ -12,7 +12,11 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Lists and tuples in Python are both used to store values.
+
+> Lists are an ordered set of values and can be changed or reordered. Declared with square brackets [ ]
+
+> Tuples are different in that their values are immutable and cannot be changed after initiation. So its structure remains intact. Declared with parenthesis ( ). Being immutable also means that tuples can be used as keys in dictionaries.
 
 ---
 
@@ -20,7 +24,14 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Sets are unordered lists that cannot consists of duplicates.  
+> A list of coins you have in your pocket could be:  
+> `[penny, penny, nickel, dime, dime, dim, quarter]`
+
+> But a set of the types of coins you have won't be duplicated.  
+> You'd have a set of `[penny, nickel, dime, quarter]`
+
+> Sets are much faster than lists to find an element because items in sets have unique values and can be hashed. Performance wise, it is in constant time. Performance for searching through a list depends on the length of the list
 
 ---
 
@@ -28,7 +39,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Python's lambda functions allow you to define a quick anonymous function that can be used in arguments for other functions. For example, if I want to sort a list of numbers based on the right most digit, I can use a lambda function in the key argument of the sorted function.
+
+> `my_list = [15, 27, 51, 96, 39, 88, 60]`  
+> `print sorted(my_list, key = lambda x: x%10)`  
+> Will return: [60, 51, 15, 96, 27, 88, 39]
 
 ---
 
@@ -36,7 +51,21 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> List comprehensions are a quick way to build lists based on certain criteria.
+
+> For example I want to generate a list of squared numbers where the number is less than 300 and divisible by 13, with list comprehensions:
+> `numbers = range(1,301)`  
+> `[x**2 for x in numbers if (x < 300 and x%13 == 0)]`
+
+> With map:  
+> `map(lambda x: x**2, range(1,301)[::13])`
+
+> With filter:  
+> `squares = map(lambda x: x ** 2, range(1,301))`  
+> `filter(lambda x: x**0.5 % 13 == 0, squares)`
+
+> Performance wise, list comprehension took 68ms, map took 8ms, and filter took 51ms
+
 
 ---
 
@@ -51,7 +80,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 937 days
 
 b.  
 ```
@@ -59,7 +88,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 513 days
 
 c.  
 ```
@@ -67,7 +96,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  
+>> 7,850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
@@ -85,8 +114,3 @@ Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
 
 ###Q8. Parsing
 Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
-
-
-
-
-
