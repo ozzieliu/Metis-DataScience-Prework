@@ -39,11 +39,12 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
-> Python's lambda functions allow you to define a quick anonymous function that can be used in arguments for other functions. For example, if I want to sort a list of numbers based on the right most digit, I can use a lambda function in the key argument of the sorted function.
+> Python's lambda functions allow you to define a quick anonymous function that can be used in arguments for other functions.  
+> For example, if I want to sort a list of numbers based on the right most digit, I can use a lambda function in the key argument of the sorted function.
 
 > `my_list = [15, 27, 51, 96, 39, 88, 60]`  
 > `print sorted(my_list, key = lambda x: x%10)`  
-> Will return: [60, 51, 15, 96, 27, 88, 39]
+> Will return: `[60, 51, 15, 96, 27, 88, 39]`
 
 ---
 
@@ -51,20 +52,27 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
-> List comprehensions are a quick way to build lists based on certain criteria.
+> List comprehensions are a quick way to build lists based on certain criteria. It consists of square brackets containing expressions along with a number of for and if clauses.
 
-> For example I want to generate a list of squared numbers where the number is less than 300 and divisible by 13, with list comprehensions:
-> `numbers = range(1,301)`  
-> `[x**2 for x in numbers if (x < 300 and x%13 == 0)]`
+>> For example: I want to cube all the multiples of 7 between 1 and 10000  
+>> With list comprehensions, I simply do:  
+>> `[x**3 for x in range(1,10001) if x%3==0]`  
+>> With map and filter, I will have to write:  
+>> `map(lambda x: x**3, filter(lambda x: x%3==0, range(1,10001)))`  
+>> In this case, list comprehension took 5.97ms, and map+filter took 6.04ms
 
-> With map:  
-> `map(lambda x: x**2, range(1,301)[::13])`
+> List comprehensions are typically easier to read and is more pythonic, but in certain situations, `map` may have a slight edge in performance. Also, for complicated functions that do not fit in a lambda function, you will have to use map+filter.
 
-> With filter:  
-> `squares = map(lambda x: x ** 2, range(1,301))`  
-> `filter(lambda x: x**0.5 % 13 == 0, squares)`
+> Set comprehensions are performed similarly to list comprehensions except you use curly brackets { }, and the resulting list does not contain repeating values.  
+>> For example, in a class of 500 students, I can find a set of grades that are lower than 60%  
+>> `grades = [random.randint(0,100) for x in xrange(500)]`  
+>> `failing_grades = {x for x in grades if x < 60}`
 
-> Performance wise, list comprehension took 68ms, map took 8ms, and filter took 51ms
+> Dict comprehensions are also performed similarly, but instead of just defining values, you can define key:value pairs through list comprehensions.  
+>> Let's say a student's extra credit points is unfairly based on the length of their name. I can make a dict with the students' names:extra credit points:  
+>> `student = ['andrew', 'bob', 'carol', 'denise', 'ernie', 'francis', 'gertrude']`  
+>> `extra_credit = {name:len(name) for name in student}`  
+>> Result: `{'gertrude': 8, 'ernie': 5, 'andrew': 6, 'denise': 6, 'carol': 5, 'francis': 7, 'bob': 3}`
 
 
 ---
