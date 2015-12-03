@@ -24,7 +24,7 @@ def donuts(count):
     else:
         return "Number of donuts: %d" % count
 
-print "Question 1:"
+print "Problem 1:"
 print donuts(4)
 print donuts(9)
 print donuts(10)
@@ -51,7 +51,7 @@ def both_ends(s):
     else:
         return s[:2]+s[-2:]
 
-print "\nQuestion 2:"
+print "\nProblem 2:"
 print both_ends('spring')
 print both_ends('Hello')
 print both_ends('a')
@@ -83,7 +83,7 @@ def fix_start(s):
             result.append(letter)
     return ''.join(result)
 
-print "\nQuestion 3:"
+print "\nProblem 3:"
 print fix_start('babble')
 print fix_start('aardvark')
 print fix_start('google')
@@ -109,7 +109,7 @@ def mix_up(a, b):
     new_b = a[0:2] + b[2:]
     return "%s %s" % (b[0:2] + a[2:], a[0:2] + b[2:])
 
-print "\nQuestion 4:"
+print "\nProblem 4:"
 print mix_up('mix', 'pod')
 print mix_up('dog', 'dinner')
 print mix_up('gnash', 'sport')
@@ -136,7 +136,7 @@ def verbing(s):
     else:
         return s+ "ing"
 
-print "\nQuestion 5:"
+print "\nProblem 5:"
 print verbing('hail')
 print verbing('swiming')
 print verbing('do')
@@ -159,7 +159,14 @@ def not_bad(s):
     "It's bad yet not"
     """
     import string
-    words = s.split("! ")
+
+    ## If last character is a punctiaton, take it out and replace it later
+    punctuation = ''
+    if s[-1] in string.punctuation:
+        punctuation = s[-1]
+        s = s[:-1]
+
+    words = s.split()
 
     if 'not' in words and 'bad' in words:
         not_index = words.index('not')
@@ -168,10 +175,12 @@ def not_bad(s):
             words[not_index: bad_index+1] = ['good']
 
     result = " ".join(words)
+    # Replace punctuation
+    result += punctuation
 
     return result
 
-print "\nQuestion 6:"
+print "\nProblem 6:"
 print not_bad('This movie is not so bad')
 print not_bad('This dinner is not that bad!')
 print not_bad('This tea is not hot')
@@ -213,7 +222,7 @@ def front_back(a, b):
 
     return a_front + b_front + a_back + b_back
 
-print "\nQuestion 7:"
+print "\nProblem 7:"
 print front_back('abcd', 'xy')
 print front_back('abcde', 'xyz')
 print front_back('Kitten', 'Donut')
