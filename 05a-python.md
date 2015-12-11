@@ -12,11 +12,11 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
-> Lists and tuples in Python are both used to store values.
+>> Lists and tuples in Python are both used to store values.
 
-> Lists are an ordered set of values and can be changed or reordered. Declared with square brackets [ ]
+>> Lists are an ordered set of values and can be changed or reordered. Declared with square brackets [ ]
 
-> Tuples are different in that their values are immutable and cannot be changed after initiation. So its structure remains intact. Declared with parenthesis ( ). Being immutable also means that tuples can be used as keys in dictionaries.
+>> Tuples are different in that their values are immutable and cannot be changed after initiation. So its structure remains intact. Declared with parenthesis ( ). Being immutable also means that tuples can be used as keys in dictionaries.
 
 ---
 
@@ -24,14 +24,14 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
-> Sets are unordered lists that cannot consists of duplicates.  
-> A list of coins you have in your pocket could be:  
-> `[penny, penny, nickel, dime, dime, dim, quarter]`
+>> Sets are unordered lists that cannot consists of duplicates.  
+>> A list of coins you have in your pocket could be:  
+>> `[penny, penny, nickel, dime, dime, dim, quarter]`
 
-> But a set of the types of coins you have won't be duplicated.  
-> You'd have a set of `[penny, nickel, dime, quarter]`
+>> But a set of the types of coins you have won't be duplicated.  
+>> You'd have a set of `[penny, nickel, dime, quarter]`
 
-> Sets are much faster than lists to find an element because items in sets have unique values and can be hashed. Performance wise, it is in constant time. Performance for searching through a list depends on the length of the list
+>> Sets are much faster than lists to find an element because items in sets have unique values and can be hashed. Performance wise, it is in constant time. Performance for searching through a list depends on the length of the list
 
 ---
 
@@ -42,9 +42,9 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 > Python's lambda functions allow you to define a quick anonymous function that can be used in arguments for other functions.  
 > For example, if I want to sort a list of numbers based on the right most digit, I can use a lambda function in the key argument of the sorted function.
 
-> `my_list = [15, 27, 51, 96, 39, 88, 60]`  
-> `print sorted(my_list, key = lambda x: x%10)`  
-> Will return: `[60, 51, 15, 96, 27, 88, 39]`
+>> `my_list = [15, 27, 51, 96, 39, 88, 60]`  
+>> `print sorted(my_list, key = lambda x: x%10)`  
+>> Will return: `[60, 51, 15, 96, 27, 88, 39]`
 
 ---
 
@@ -52,7 +52,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
-> List comprehensions are a quick way to build lists based on certain criteria. It consists of square brackets containing expressions along with a number of for and if clauses.
+>> List comprehensions are a quick way to build lists based on certain criteria. It consists of square brackets containing expressions along with a number of for and if clauses.
 
 >> For example: I want to cube all the multiples of 7 between 1 and 10000  
 >> With list comprehensions, I simply do:  
@@ -61,14 +61,14 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> `map(lambda x: x**3, filter(lambda x: x%3==0, range(1,10001)))`  
 >> In this case, list comprehension took 5.97ms, and map+filter took 6.04ms
 
-> List comprehensions are typically easier to read and is more pythonic, but in certain situations, `map` may have a slight edge in performance. Also, for complicated functions that do not fit in a lambda function, you will have to use map+filter.
+>> List comprehensions are typically easier to read and is more pythonic, but in certain situations, `map` may have a slight edge in performance. Also, for complicated functions that do not fit in a lambda function, you will have to use map+filter.
 
-> Set comprehensions are performed similarly to list comprehensions except you use curly brackets { }, and the resulting list does not contain repeating values.  
+>> Set comprehensions are performed similarly to list comprehensions except you use curly brackets { }, and the resulting list does not contain repeating values.  
 >> For example, in a class of 500 students, I can find a set of grades that are lower than 60%  
 >> `grades = [random.randint(0,100) for x in xrange(500)]`  
 >> `failing_grades = {x for x in grades if x < 60}`
 
-> Dict comprehensions are also performed similarly, but instead of just defining values, you can define key:value pairs through list comprehensions.  
+>> Dict comprehensions are also performed similarly, but instead of just defining values, you can define key:value pairs through list comprehensions.  
 >> Let's say a student's extra credit points is unfairly based on the length of their name. I can make a dict with the students' names:extra credit points:  
 >> `student = ['andrew', 'bob', 'carol', 'denise', 'ernie', 'francis', 'gertrude']`  
 >> `extra_credit = {name:len(name) for name in student}`  
