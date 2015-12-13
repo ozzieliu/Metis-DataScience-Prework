@@ -35,11 +35,8 @@ def find_degrees(data):
         degree_list.extend(re.findall(r'\b[A-Z][a-z]{0,1}[A-Z]{1,2}', str(line)))
 
     ## Now I have the issue where the same degrees are punctuated differently.
-    ## To try to capture all of variations, I change the list into all uppercase
-    ## and strip any periods.
-    formatted_list = [x.upper() for x in degree_list]
-    formatted_list = [re.sub(r'\.', '', x) for x in formatted_list]
-    #print formatted_list
+    ## To try to capture all of variations, I strip any periods from the degrees
+    formatted_list = [re.sub(r'\.', '', x) for x in degree_list]
 
     ## Now use collections Counter to find and count the unique degrees.
     degree_count = Counter(formatted_list)
@@ -60,7 +57,7 @@ def find_titles(data):
     for line in data:
         ## Use regex to find all titles and add them to the list. We know that
         ## titles end in Biostatistcs and will include any typos.
-        title_list.extend(re.findall(r'(\b(?:(?:\w+\s){0,3})Biostatistics)', str(line)))
+        title_list.extend(re.findall(r'\b((?:\w+ ){0,1}(?:\w+)) \w+ Biostatistics', str(line)))
 
     ## Find all unique titles and return the number of unique titles.
     title_count = Counter(title_list)
@@ -100,8 +97,8 @@ def number_of_domains(data):
     return domain_set
 
 ## Main function area:
-faculty = read_data('faculty.csv')
-find_degrees(faculty)
-find_titles(faculty)
-print 'List of faculty emails: ', search_for_email(faculty)
-print 'List of all unique domains: ', number_of_domains(faculty)
+#faculty = read_data('faculty.csv')
+#find_degrees(faculty)
+#find_titles(faculty)
+#print 'List of faculty emails: ', search_for_email(faculty)
+#print 'List of all unique domains: ', number_of_domains(faculty)
