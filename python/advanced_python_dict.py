@@ -4,6 +4,7 @@
 from advanced_python_regex import read_data
 import re
 import operator
+import pprint
 
 faculty = read_data('faculty.csv')
 
@@ -51,11 +52,12 @@ def better_dictionary(faculty):
 
 
 ## Main area:
-#print professor_dictionary(faculty)
-#print "\n"
+#Q1
+#pprint.pprint(professor_dictionary(faculty))
+#Q2
 part2_dict = better_dictionary(faculty)
-#print part2_dict
+#pprint.pprint(part2_dict, width = 200)
 
 sorted_dict = sorted(part2_dict.items(), key = lambda x: x[0][1])
 
-print sorted_dict
+pprint.pprint(sorted_dict)
