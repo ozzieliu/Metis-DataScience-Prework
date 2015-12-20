@@ -13,7 +13,7 @@
 
 ## Currrently, we are stripping all words from the original text of punctuation and converting it all to lowercase.
 ## The output would be a string of words of the desired length
-## While the desired suffix length is currently set to 4. (1 word + 4 subsequent words). This can be changed in the main function.
+## While the desired suffix length is currently set to 3. (1 word + 2 subsequent words). This can be changed in the main function.
 
 ## Next steps would be to factor in capitalized words and punctuation.
 
@@ -79,12 +79,12 @@ def markov_generator(dictionary, length):
     if len(text) > length:
         text = text[:length]
 
-    print len(text)
+    #print len(text)
     return " ".join(text)
 
 ## Main section
 def main(argv):
-    my_dict = create_word_dict(sys.argv[1], 5)
+    my_dict = create_word_dict(sys.argv[1], 3)
     #print type(sys.argv[1]), type(sys.argv[2])
     print markov_generator(my_dict, int(sys.argv[2]))
 
