@@ -64,7 +64,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> List comprehensions are typically easier to read and is more pythonic, but in certain situations, `map` may have a slight edge in performance. Also, for complicated functions that do not fit in a lambda function, you will have to use map+filter.
 
 >> Set comprehensions are performed similarly to list comprehensions except you use curly brackets { }, and the resulting list does not contain repeating values.  
->> For example, in a class of 500 students, I can find a set of grades that are lower than 60%  
+>> For example, in a class of 500 students, I can find the set of grades that are lower than 60%  
 >> `grades = [random.randint(0,100) for x in xrange(500)]`  
 >> `failing_grades = {x for x in grades if x < 60}`
 
