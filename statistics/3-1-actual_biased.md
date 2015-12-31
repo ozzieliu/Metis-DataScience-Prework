@@ -6,7 +6,7 @@
 >> Running the Python code below, we see that the actual distribution has a mean of **1.0242**,
 >> while the biased distribution is **2.4036** - a significant increase due to the bias.
 
->> And here's a graph of the 2 distributions:
+>> And here's a graph of the 2 distributions:  
 >> ![distribution](img/pmf.png)
 
 
