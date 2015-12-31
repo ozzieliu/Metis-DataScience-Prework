@@ -3,10 +3,10 @@
 >> In this exercise, 1000 random numbers are generated and we examine its PMF and CDF to see if it is truly random:
 
 >> Plot for its PMF  
->> ![pmf](/img/random_pmf.png)
+>> ![pmf](img/random_pmf.png)
 
 >> Plot of its CDF  
->> ![cdf](/img/random_cdf.png)
+>> ![cdf](img/random_cdf.png)
 
 ```python
 import random
