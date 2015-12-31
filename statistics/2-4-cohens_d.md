@@ -1,10 +1,12 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
->> First borns are lighter than later born babies by about 2 ounces. But we'll look at a few statistics for details on the difference.  
+>> First borns are lighter than later born babies by about 2 ounces. But we'll look at a few statistics for details on the difference.   
+
 >> Mean comparison:  
 >> All babies: 7.265628457623368  
 >> First born: 7.201094430437772  
 >> Others: 7.325855614973262  
+
 >> First borns are lighter than others by 1.9961789525678455 ounces.  
 
 >> Variance comparison  
