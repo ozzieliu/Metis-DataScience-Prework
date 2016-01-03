@@ -35,7 +35,7 @@ spearman = x_series.corr(y_series, method='spearman')
 print "Spearman's correlation: %r" %spearman
 ```
 
->> The following graph:  
+>> The following scatterplot:  
 >> ![scatterplot](img/scatter.png)  
 >> And the calculated correlations shows that there is pretty much no correlation between the 2 data set.  
 >> `Pearson's correlation: 0.068833970354109097`  
