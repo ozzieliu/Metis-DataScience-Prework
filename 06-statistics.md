@@ -9,9 +9,9 @@ Read Allen Downey's [Think Stats (second edition)](http://greenteapress.com/thin
 
 The ThinkStats book is approximately 200 pages in length.  It is recommended you read the entire book, particularly if you are less familiar with introductory statistical concepts.
 
-The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the ThinkStats repository on GitHub.  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you. 
+The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the ThinkStats repository on GitHub.  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you.
 
-For example, in the first exercise, the author has already written a function to compute Cohen's D.  You could import it, or you could write your own to practice python and develop a deeper understanding of the concept. 
+For example, in the first exercise, the author has already written a function to compute Cohen's D.  You could import it, or you could write your own to practice python and develop a deeper understanding of the concept.
 
 Complete the following exercises along with the questions in this file. They come from Think Stats, and some can be solved using code provided with the book. The preface of Think Stats [explains](http://greenteapress.com/thinkstats2/html/thinkstats2001.html#toc2) how to use the code.  
 *See FAQ at the end of this page for more detailed instructions on cloning the repo.*
@@ -34,7 +34,7 @@ This problem presents a robust example of actual vs biased data.  As a data scie
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
 ###Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (blue men)
-This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
+This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.
 
 As a bonus (optional) step, write out the null hypothesis, alternative hypothesis, critical value for testing, and the associated p-value.  You will see p-values in virtually every algorithm output during the bootcamp.  And from this exercise, you will know how the p-value has been computed and its relationship to a distribution.
 
@@ -44,20 +44,27 @@ In this exercise, you will compute the effect size of correlation.  Correlation 
 ###Q6. [Think Stats Chapter 8 Exercise 2](statistics/8-2-sampling_dist.md) (sampling distribution)
 In the theoretical world, all data related to an experiment or a scientific problem would be available.  In the real world, some subset of that data is available.  This exercise asks you to take samples from an exponential distribution and examine how the standard error and confidence intervals vary with the sample size.
 
-###Q7. Bayesian (Elvis Presley twin) 
+###Q7. Bayesian (Elvis Presley twin)
 
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Knowing that Bayes Theorem says: `P(A|B) = P(A)*P(B|A)/P(B)`, I am trying to find the probability that Elvis was an identical twin knowing that he is a twin.  
+>> So prior **A = identical twins** and prior **B = he is a twin**.  
+>> `P(fraternal & twin boys) = P(fraternal) * P(twin boys|fraternal) = (1/125) * (1/4)`  
+>> `P(identical & twin boys) = P(identical) * P(twin boys|identical) = (1/300) * (1/2)`  
+>> `P(identical | twin) = P(identical & twin boys) / (P(identical & twin boys) + P(fraternal & twin boys))`  
+>>   `= (1/300) * (1/2)/[(1/300) * (1/2)+(1/125) * (1/4)] = 5/11`
 
 ---
 
 ###Q8. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentists measures the ratio of outcomes for a given experiment. They're into counting and considering the empirical probability of an event. So a fair coin always has a 0.50 probability of landing heads.
+
+>> Bayesian statistics look at probability as a degree of belief. So based on the observations, the probability could change. If a fair coin flipped 100 times landed 80 heads, a Bayesian interpretation would be inclined to say that the coin is actually unfair and 80% heads.
 
 ---
 
@@ -98,7 +105,3 @@ $ git clone https://github.com/AllenDowney/ThinkStats2.git
 (Mac):     /Users/yourname/ds/metis/prework/ThinkStats2/code  
 (Windows):  C:/ds/metis/prework/ThinkStats2/code
 ```
-
-
-
-
